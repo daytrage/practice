@@ -1,0 +1,214 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+
+/* ヘッダー */
+.header_main {
+  background: #fff;
+}
+
+.header_main > .container {
+  height: 90px;
+  padding: 0 40px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+/* ロゴエリア */
+.header_logo_area {
+  display: flex;
+  align-items: center;
+}
+
+.header_logo_area img {
+  height: 60px;
+  vertical-align: bottom;
+}
+
+.header_logo_area .copy {
+  color: #333;
+  font: 300 12px/1em 'Noto Sans JP', sans-serif;
+  margin:0 0 0 24px;
+}
+
+/* ナビエリア */
+.header_nav_area {
+  display: flex;
+  align-items: center;
+  /* ★エリアを空き領域いっぱいまで広げる */
+  flex: auto;
+}
+
+/* ナビメイン */
+.nav_main_ul {
+  display: flex;
+  align-items: center;
+  /* ★中央揃え */
+  margin: 0 auto;
+}
+
+.nav_main_ul > li + li {
+  margin-left: 40px;
+}
+
+.nav_main_ul a {
+  color: #333;
+  font: 500 15px/1em 'Noto Sans JP', sans-serif;
+}
+
+
+/* ナビアイコン */
+.nav_icon_ul {
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  /* ★右寄せ */
+  margin-left: auto;
+  border-left: 1px solid #ccc;
+}
+
+.nav_icon_ul > li + li {
+  margin-left: 10px;
+}
+
+.nav_icon_ul a {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.nav_icon_ul .search a {
+  background: url(../svg/ico_search.svg) no-repeat center center;
+  background-size: contain;
+}
+
+.nav_icon_ul .favorit a {
+  background: url(../svg/ico_heart.svg) no-repeat center center;
+  background-size: contain;
+}
+
+.nav_icon_ul .cart a {
+  background: url(../svg/ico_cart.svg) no-repeat center center;
+  background-size: contain;
+}
+
+
+
+
+
+.selector1  [target] {
+   font-weight: bold;
+ }
+
+ .selector2  [href="#top"] {
+  font-weight: bold;
+ }
+
+ .selector3  [href^="https"] {
+  font-weight: bold;
+ }
+
+ .selector4  [href$="dotinstall"] {
+  font-weight: bold;
+ }
+
+ .selector5  [href*="com"] {
+  font-weight: bold;
+ }
+
+th {
+  background-color: hsl(180, 100%, 80%);
+  padding: 8px 32px;
+}
+
+ td {
+  padding: 8px 32px;
+  background-color: hsl(180, 100%, 95%);
+ }
+
+ .pp p + p {
+   border-top: 1px solid hsl(180, 100%, 80%);
+ }
+
+ .bab h1::before {
+  content: '- ';
+}
+
+.bab h1::after {
+  content: ' -';
+}
+
+ .ba h1::before, .ba h2::before {
+   content: '- ';
+ }
+
+ .ba h1::after, .ba h2::after {
+   content: attr(data-subtitle);
+ }
+
+ .btn {
+   width: 100px;
+   background: hsl(200, 100%, 50%);
+   text-align: center;
+   padding: 4px;
+   cursor: pointer;
+ }
+
+ .btn a {
+   text-decoration: none;
+   color: white;
+ }
+
+ .btn:hover {opacity: 0.8;}
+
+ .child > :nth-child(3) {
+   background-color: pink;
+ }
+
+ .child > :nth-child(3n) {
+  background-color: pink;
+}
+
+.child2 > :nth-child(odd) {
+  background-color: hsl(300, 100%, 80%);
+}
+
+.child2 > :nth-child(even) {
+  background-color: hsl(300, 100%, 95%);
+}
+
+.child3 > :first-child {
+  background-color: hsl(180, 100%, 90%);
+}
+
+.child3 > :last-child {
+  background-color: hsl(180, 100%, 90%);
+}
+
+.child3 > h2:first-of-type {
+  background-color: hsl(180, 100%, 50%);
+}
+
+.child3 > h2:last-of-type {
+  background-color: hsl(180, 100%, 50%);
+}
+
+ 
+
+
+.child4 > h2:nth-of-type(2) {
+  background-color: hsl(45, 100%, 60%);
+}
+
+.child4 > h2:nth-of-type(odd) {
+  background-color: hsl(45, 100%, 50%);
+}
+
+.empty li:empty {
+  background: skyblue; 
+} 
+
+.not li:not(:empty) {
+  background: hsl(200, 100%, 50%); 
+} 

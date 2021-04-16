@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS変数</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/09_variables.css">
+  <link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header_main">
+    <div class="container">
+      <!-- ロゴ -->
+      <div class="header_logo">
+        <a class="header_logo_a" href="">
+          <img src="img/MyHTML/logo.png" alt="">
+        </a>
+      </div>
+      <!-- ナビ -->
+      <nav class="header_nav">
+        <!-- ナビ上段 -->
+        <div class="nav_upper">
+          <ul class="nav_upper_ul">
+            <li>
+              <a href="">あああ</a>
+            </li>
+            <li>
+              <a href="">あああ</a>
+            </li>
+            <li>
+              <a href="">あああ</a>
+            </li>
+          </ul>
+        </div>
+        <!-- ナビ下段 -->
+        <div class="nav_lower">
+          <ul class="nav_lower_ul">
+            <li>
+              <a href="">いいい</a>
+            </li>
+            <li>
+              <a href="">いいい</a>
+            </li>
+            <li>
+              <a href="">いいい</a>
+            </li>
+            <li>
+              <a href="">いいい</a>
+            </li>
+            <li>
+              <a href="">いいい</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+  </header>
+
+
+
+  <h1>CSS変数を宣言する</h1>
+  <p>
+    --好きな名前: orange;<br>
+    例） <strong>--my-color</strong>: orange;
+  </p>
+  <p>※変数名は大文字小文字を区別する。</p>
+  <p>※h1{}内で作った変数はh1内でしか使えない。</p>
+
+  <h1>CSS変数を使う</h1>
+  <p>var(宣言した好きな名前)　←既に変数を宣言済みの場合</p>
+  <p>例） color: <span>var(<strong>--my-color</strong>)</span>;</p>
+
+  <p>var(CSS変数を宣言, 変数)　←その場で変数を宣言する場合</p>
+  <p>例） color: <span>var(<strong>--color</strong>, orange)</span>;</p>
+  <h1>CSS変数の継承</h1>
+  <p>
+    h1{}内で作った変数はh1内でしか使えない。<br>
+    その為、h1の親（body）にCSS変数を宣言すると他でも使える。<br>
+    body {<br>
+      --my-color: orange;<br>
+    }<br>
+  </p>
+  <p>
+    bodyより上の「:root」になる。<br>
+    root疑似クラスはXMLやSVGといった文書にも使える。
+  </p>
+  
+  <h1>注意点</h1>
+  <p>・プロパティ名には使えない。プロパティの値のみに使える。</p>
+  <p>
+    ・変数の後に単位を付けても認識してくれない。<br>
+    例）--my-size:32
+    margin:var(--my-size)px;　←使用できない。
+  </p>
+  <p>
+    ・変数に単位を付けるなら、<br>
+    ①--my-size:32px　宣言時に付ける。<br>
+    ②margin: <strong>calc(var(</strong>--my-size<strong>) * 1px);</strong>　とする。
+  </p>
+
+  <div class="body1">
+    <h2>変数を使ってテーマカラーを管理する</h2>
+    <p>hslの色相を変数として宣言する。</p>
+    <p>変数を変えるとバランスの取れた色の変化をすることができる。</p>
+    <p class="tc">:root {--my-hue: 200;}</p>
+    <div class="btn">OK!</div>
+
+    <p>反対色にしたい場合</p>
+    <p>
+      色相にcalc関数で 180 または 60 を足してあげる</p>
+
+    <p class="tc2">calc(var(--my-hue) + 180)</p>
+    <div class="btn2">OK!</div>
+
+  </div>
+
+  
+</body>
+</html>

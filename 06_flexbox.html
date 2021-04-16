@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>フレックスボックス</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/06_flexbox.css">
+  <link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header_main">
+    <div class="container">
+      <!-- ロゴ -->
+      <div class="logo_area">
+        <a class="logo_a" href="index.html">
+          <img src="img/MyHTML/logo.png" alt="">
+        </a>
+        <p class="copy">5,000円以上購入で送料無料</p>
+      </div>
+      <!-- ナビエリア -->
+      <nav class="nav_area">
+        <!-- ナビメイン -->
+        <ul class="nav_main_ul">
+          <li>
+            <a href="">BRAND</a>
+          </li>
+          <li>
+            <a href="">CATEGRY</a>
+          </li>
+          <li>
+            <a href="">ALL ITEMS</a>
+          </li>
+          <li>
+            <a href="">TOPICS</a>
+          </li>
+        </ul>
+        <!-- ナビアイコン -->
+        <ul class="nav_icon_ul">
+          <li class="search">
+            <a href=""></a>
+          </li>
+          <li class="favorit">
+            <a href=""></a>
+          </li>
+          <li class="cart">
+            <a href=""></a>
+          </li>
+        </ul>
+      </div> 
+    </nav>
+
+  </header>
+
+
+
+
+
+
+
+  <h2>フレックスボックスの使い方</h2>
+  <p>親要素に display: flex; を指定する</p>
+  <div class="container1">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+  </div>
+  <h2>flex:〇;　余白いっぱいに幅を広げる</h2>
+  <p>親をflex container、子をflex itemと呼ぶ。</p>
+  <p>親にdisplay:flexを設定する。</p>
+  <div class="container1">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3 box1a">
+      <p>flex: 1</p>
+      <p>要素の幅が可変になる</p>
+    </div>
+  </div>
+
+  <div>
+    <h2>Flex Container　集合体をコントロール</h2>
+    <ul>
+      <li>
+        flex-direction…主軸の方向を決めるプロパティ…主軸→交差軸↓
+        <ul>
+          <li>flex-direction：row（初期値）主軸→↓交差軸</li>
+          <li>flex-direction：row-reverse　主軸←↓交差軸</li>
+          <li>flex-direction：column　交差軸→↓主軸</li>
+          <li>flex-direction：column-reverse　交差軸→↑主軸</li>
+        </ul>
+      </li>
+
+      <li>
+        justify-content…水平方向の左・中央・右揃えを指定する
+        <ul>
+          <li>justify-content:flex-start　主軸の左揃え</li>
+          <li>justify-content:flex-ent　主軸の右揃え</li>
+          <li>justify-content:center　主軸の中央揃え</li>
+          <li>justify-content:space-between　要素の間に余白が均等に入る</li>
+        </ul>
+      </li>
+      <li>
+        align-items…交差軸に沿ってどう要素を揃えるか
+        <ul>
+          <li>align-items:flex-start　上揃え</li>
+          <li>align-items:flex-end　下揃え</li>
+          <li>align-items:center　下揃え</li>
+        </ul>
+      </li>
+      <li>flex-wrap</li>
+      <ul>
+        <li>flex-wrap:row　</li>
+      </ul>
+      <li>align-content</li>
+    </ul>
+  </div>
+  <hr>
+  <h2>flex-wrap: nowrap;(初期値)</h2>
+  <p>親のwidthに併せて均等に調整してくれる</p>
+  <div class="container2">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </div>
+  <hr>
+  <h2>flex-wrap: wrap;</h2>
+  <p>親のwidthを超えたら折り返す</p>
+  <p>短縮例）flex-flow: row wrap; = flex-direction: row; + flex-wrap: wrap;</p>
+  <div class="container3 fw1">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box1">wrap</div>
+  </div>
+  <hr>
+  <h2>flex-wrap: wrap-reverse;</h2>
+  <p>交差軸が↑になり、親のwidthを超えたら上に折り返す</p>
+  <div class="container3 fw2">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box1">wrap-reverse</div>
+  </div>
+  <hr>
+  <h2>flex-wrap: wrap;　はみ出した要素を折り返す</h2>
+  <h2>align-content: flex-start;　上揃え</h2>
+  <p>折り返した要素をくっつけて：上に揃える；</p>
+  <div class="container3 fw3">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box1">flex-start</div>
+  </div>
+  <hr>
+  <h2>flex-wrap: wrap;　はみ出した要素を折り返す</h2>
+  <h2>align-content: flex-end;　下揃え</h2>
+  <p>折り返した要素をくっつけて：下に揃える；</p>
+  <div class="container3 fw4">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box1">flex-end</div>
+  </div>
+  <hr>
+  <h2>flex-wrap: wrap;　はみ出した要素を折り返す</h2>
+  <h2>align-content: center;　中央揃え</h2>
+  <p>要素が中央に集まる；</p>
+  <div class="container3 fw5">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box1">center</div>
+  </div>
+  <hr>
+  <h2>flex-wrap: wrap;　はみ出した要素を折り返す</h2>
+  <h2>align-content: space-between;　中央揃え</h2>
+  <p>中央に余白が集まる</p>
+  <div class="container3 fw6">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box1">space-between</div>
+  </div>
+  <hr>
+  <h2>Flex Item　個体をコントロール</h2>
+  <ul>
+    <li>align-self</li>
+    <li>order</li>
+    <li>flex-basis</li>
+    <li>flex-grow</li>
+    <li>flex-shrink</li>
+  </ul>
+  <hr>
+  <h2>align-self: flex-start;　交差軸（縦）の上揃え</h2>
+  <div class="container3">
+    <div class="box box1 as1">flex-start</div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </div>
+  <hr>
+  <h2>align-self: flex-end;　交差軸（縦）の下揃え</h2>
+  <div class="container3">
+    <div class="box box1 as2">flex-end</div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </div>
+  <hr>
+  <h2>align-self: center;　交差軸（縦）の中央揃え</h2>
+  <div class="container3">
+    <div class="box box1 as3">center</div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </div>
+  <hr>
+  <h2>order: 0;（初期値）</h2>
+  <h2>（←左へ）-1　０　1（右→）</h2>
+
+  <p>親（Flex Container）.container2</p>
+  <p>子（Flex Item）box1,box2,box3</p>
+  <div class="container2">
+    <div class="box box1">1</div>
+    <div class="box box2 od1">2　order: -1;</div>
+    <div class="box box3">3</div>
+  </div>
+  <hr>
+  <h2>flex-basis: auto(初期値)…コンテンツの横幅</h2>
+  <p>flex-grow や flex-shrink での計算に使われる要素のサイズを決める為のプロパティ</p>
+  <p>width: 100px;と設定されていれば、auto=100pxになる</p>
+  <div class="container2">
+    <div class="box1">1</div>
+  </div>
+  <hr>
+  <h2>flex-grow: (余白分伸ばす割合);</h2>
+  <p>０…余白があっても伸ばさない</p>
+  <div class="container2">
+    <div class="box box1 fb1">flex-grow: 1;</div>
+    <div class="box box2 fb2">flex-grow: 0;</div>
+    <div class="box box3 fb3">flex-grow: 2;</div>
+  </div>
+  <hr>
+  <h2>flex-shrink: (不足分を縮ませる割合);</h2>
+  <p>コンテナの幅が足りない時にどの要素をどれだけ縮めるか指定できる</p>
+  <p>flex-shrink: 0;　(縮まない)</p>
+  <p>flex-shrink: 1;　(初期値)</p>
+  <div class="container2">
+    <div class="box box1 fs0">flex-shrink: 0;</div>
+    <div class="box box2 fs0">flex-shrink: 0;</div>
+    <div class="box box3 fs1">flex-shrink: 1;</div>
+    <div class="box box1 fs1">flex-shrink: 1;</div>
+  </div>
+
+  <hr>
+  <h2>flex: 1 1 100px;</h2>
+  <p>領域が余ったら伸ばす、足りないなら縮める</p>
+  <p>flex-grow: 1;　伸びる</p>
+  <p>flex-shrink: 1;　(初期値)縮む</p>
+  <p>flex-basis: 100px;　横幅</p>
+  <div class="container2">
+    <div class="box box1 sample">flex-grow: 1;伸びる</div>
+    <div class="box box2">100×100 伸びない(初期値0)</div>
+    <div class="box box3">100×100 伸びない(初期値0)</div>
+  </div>
+  <div class="container4">
+    <div class="box box1 sample">flex-shrink: 1;　(初期値)縮む</div>
+    <div class="box box2">縮む(初期値1)</div>
+    <div class="box box3">縮む(初期値1)</div>
+  </div>
+
+  <hr>
+  <h2>flex: initial;</h2>
+  <p>領域が余っても伸ばさない、足りなりなら縮める</p>
+  <p>flex-grow: 0;　伸びない(初期値)</p>
+  <p>flex-shrink: 1;　縮む(初期値)</p>
+  <p>flex-basis: auto;　コンテンツの横幅(初期値)</p>
+  <div class="container2">
+    <div class="box box1 initial">flex-grow: 0;伸びない</div>
+    <div class="box box2">100×100 伸びない(初期値0)</div>
+    <div class="box box3">100×100 伸びない(初期値0)</div>
+  </div>
+  <div class="container4">
+    <div class="box box1 initial">flex-shrink: 1;　縮む(初期値)</div>
+    <div class="box box2">縮む(初期値1)</div>
+    <div class="box box3">縮む(初期値1)</div>
+  </div>
+
+  <hr>
+  <h2>flex: auto;</h2>
+  <p>flex-grow: 1;伸びる</p>
+  <p>flex-shrink: 1;　縮む(初期値)</p>
+  <p>flex-basis: auto;　(初期値)</p>
+  <div class="container2">
+    <div class="box box1 auto">flex-grow: 1;伸びる</div>
+    <div class="box box2">100×100 伸びない(初期値0)</div>
+    <div class="box box3">100×100 伸びない(初期値0)</div>
+  </div>
+  <div class="container4">
+    <div class="box box1 auto">flex-shrink: 1;　(初期値)縮む</div>
+    <div class="box box2">縮む(初期値1)</div>
+    <div class="box box3">縮む(初期値1)</div>
+  </div>
+  
+  <hr>
+  <h2>flex: none;</h2>
+  <p>flex-grow: 0;　伸びない(初期値)</p>
+  <p>flex-shrink: 0;　縮まない</p>
+  <p>flex-basis: auto;　(初期値)</p>
+  <div class="container2">
+    <div class="box box1 none">flex-grow: 0;　伸びない(初期値)</div>
+    <div class="box box2">100×100 伸びない(初期値0)</div>
+    <div class="box box3">100×100 伸びない(初期値0)</div>
+  </div>
+  <div class="container4">
+    <div class="box box1 none">flex-shrink: 0;　縮まない</div>
+    <div class="box box2">縮む(初期値1)</div>
+    <div class="box box3">縮む(初期値1)</div>
+  </div>
+
+  <hr>
+  <h2>flex: 1;</h2>
+  <p>flex-grow: 1;　伸る</p>
+  <p>flex-shrink: 1;　縮む(初期値)</p>
+  <p>flex-basis: 0%;</p>
+  <div class="container2">
+    <div class="box box1 f1">flex-grow: 1;　伸る</div>
+    <div class="box box2">100×100 伸びない(初期値0)</div>
+    <div class="box box3">100×100 伸びない(初期値0)</div>
+  </div>
+  <div class="container4">
+    <div class="box box1 f1">flex-shrink: 1;　縮む(初期値)</div>
+    <div class="box box2">縮む(初期値1)</div>
+    <div class="box box3">縮む(初期値1)</div>
+  </div>
+
+  <hr>
+  <h2>2カラム</h2>
+  <p>親（Flex Container）.container</p>
+  <p>子（Flex Item）main, aside</p>
+  <header>header</header>
+  <div class="container1">
+    <main>main(子要素)　flex: 1;</main>
+    <aside>aside(子要素)　width: 100px;</aside>
+  </div>
+  <footer>footer</footer>
+
+  <hr>
+  <h2>3カラム</h2>
+  <p>親（Flex Container）.container</p>
+  <p>子（Flex Item）main,nav,aside</p>
+  <header>header</header>
+  <div class="container0">
+    <nav class="nav0">nav(子要素)　width: 100px;　order: -1;</nav>
+    <main>main(子要素)</main>
+    <aside>aside(子要素)　width: 100px;</aside>
+  </div>
+  <footer>footer</footer>
+
+
+  <hr>
+  <h2>flex-direction: column; 主軸↓</h2>
+  <p>親（Flex Container）.body1</p>
+  <p>子（Flex Item）上からheader　.container0　footerの順</p>
+  <p>【注意】フレックスボックスはマージンの相殺が行われない</p>
+  <div class="body1">
+    <header>header</header>
+    <div class="container0">
+      <nav class="nav0">nav(子要素)　width: 100px;　order: -1;</nav>
+      <main>main(子要素)</main>
+      <aside>aside(子要素)　width: 100px;</aside>
+    </div>
+    <footer>footer</footer>
+  </div>
+
+  <hr>
+  <h2>要素を上下左右中央にする</h2>
+  <p>親に指定して、子を動かす</p>
+  <p>親…display: flex;</p></p>
+  <p>主軸方向（横）…justify-content: center;</p>
+  <p>交差軸方向（縦）…align-items: center;</p>
+  <header class="header2">
+    <div></div>
+  </header>
+
+  <hr>
+  <h2>ヘッダーレイアウト①</h2>
+  <p>親　header　に　justify-content: space-between;　を入れてnavを右寄せするパターン</p>
+  <p>a を display: block;　にしてから　line-height:(画像の高さ);　を使用すると「1行分の高さ=画像の高さ」 にできるので縦中央に配置できる</p>
+  <header class="header3">
+    <img src="img/MyCSS/logo.png" width="64" height="64" alt="">
+    <nav class="nav1">
+      <ul>
+        <li><a href="">Menu</a></li>
+        <li><a href="">Menu</a></li>
+        <li><a href="">Menu</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+  <h2>ヘッダーレイアウト②</h2>
+  <p>子　nav　に　margin-left: auto;　を入れてnavを右寄せするパターン</p>
+  <header class="header4">
+    <img src="img/MyCSS/logo.png" width="64" height="64" alt="">
+    <nav class="nav2">
+      <ul>
+        <li><a href="">Menu</a></li>
+        <li><a href="">Menu</a></li>
+        <li><a href="">Menu</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+  <section>
+    <div class="pic">
+      <img src="img/MyCSS/logo.png" alt="">
+    </div>
+    <div class="desc">
+      <p>こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。</p>
+    </div>
+  </section>
+  <section>
+    <div class="pic">
+      <img src="img/MyCSS/logo.png" alt="">
+    </div>
+    <div class="desc">
+      <p>section:nth-child(even) {<br>
+        flex-direction: row-reverse;<br>
+      }</p>
+      <p>こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。</p>
+    </div>
+  </section>
+  <section>
+    <div class="pic">
+      <img src="img/MyCSS/logo.png" alt="">
+    </div>
+    <div class="desc">
+      <p>こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。</p>
+    </div>
+  </section>
+  <section>
+    <div class="pic">
+      <img src="img/MyCSS/logo.png" alt="">
+    </div>
+    <div class="desc">
+      <p>こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。</p>
+    </div>
+  </section>
+
+
+
+
+
+  
+</body>
+</html>

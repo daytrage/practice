@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSSの練習2</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/05_css_selector.css">
+  <link rel="icon" href="img/favicon.ico"/>
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header_main">
+    <div class="container">
+      <!-- ロゴエリア -->
+      <div class="header_logo_area">
+        <div>
+          <a class="header_logo_a" href="index.html">
+            <img src="img/MyHTML/logo.png" alt="">
+          </a>
+        </div>
+        <p class="copy">5,000円以上購入で送料無料</p>
+      </div>
+      <!-- ナビエリア -->
+      <nav class="header_nav_area">
+        <!-- ナビメイン -->
+        <ul class="nav_main_ul">
+          <li>
+            <a href="">BRAND</a>
+          </li>
+          <li>
+            <a href="">CATEGORY</a>
+          </li>
+          <li>
+            <a href="">ALL ITEM</a>
+          </li>
+          <li>
+            <a href="">TOPICS</a>
+          </li>
+        </ul>
+        <!-- ナビアイコン -->
+        <ul class="nav_icon_ul">
+          <li class="search"><a href=""></a></li>
+          <li class="favorit"><a href=""></a></li>
+          <li class="cart"><a href=""></a></li>
+        </ul>
+      </nav>
+      
+    </div>
+    
+  </header>
+
+  <section class="main">
+    <h1>セレクター {宣言}</h1>
+    <p>要素型セレクター…h1</p>
+    <p>属性セレクター…[href]</p>
+    <p>classセレクター…class="info"</p>
+    <p>class="info title"…classの複数指定は半角スペースを開ける。</p>
+    <p>* 全称セレクター…全ての要素</p>
+    
+    <hr> 
+    
+    <h1>存在の有無[target] </h1>
+    <ul class="selector1">
+      <li><a href="https://dotinstall.com" target="_blank">dotinstall　target="_blank"</a></li>
+      <li><a href="https://twitter.com/dotinstall" target="_blank">Twitter　target="_blank"</a></li>
+      <li><a href="https://facebook.com/dotinstall">Facebook</a></li>
+      <li><a href="#top">TOP</a></li>
+    </ul>
+  
+    <h1>完全一致[href="#top"] </h1>
+    <ul class="selector2">
+      <li><a href="https://dotinstall.com" target="_blank">dotinstall　target="_blank"</a></li>
+      <li><a href="https://twitter.com/dotinstall" target="_blank">Twitter　target="_blank"</a></li>
+      <li><a href="https://facebook.com/dotinstall">Facebook</a></li>
+      <li><a href="#top">TOP href="#top"</a></li>
+    </ul>
+  
+    <h1><span style="color:red;">前</span>方一致 [href<span style="color:red;">^</span>="https"] </h1>
+    <p>「^」…hrefが"https"で始まるもの</p>
+    <ul class="selector3">
+      <li><a href="https://dotinstall.com" target="_blank">dotinstall　<span style="color:red;" >https</span>://dotinstall.com</a></li>
+      <li><a href="https://twitter.com/dotinstall" target="_blank">Twitter　<span style="color:red;" >https</span>://twitter.com/dotinstall</a></li>
+      <li><a href="https://facebook.com/dotinstall">Facebook　<span style="color:red;" >https</span>://facebook.com/</a></li>
+      <li><a href="#top">TOP href="#top"</a></li>
+    </ul>
+    
+    <h1><span style="color:red;">後</span>方一致 [href<span style="color:red;" >$</span>="dotinstall"] </h1>
+    <p>「$」…hrefが"dotinstall"で終わるもの</p>
+    <ul class="selector4">
+      <li><a href="https://dotinstall.com" target="_blank">dotinstall　https://dotinstall.com</a></li>
+      <li><a href="https://twitter.com/dotinstall" target="_blank">Twitter　https://twitter.com/<span style="color:red;" >dotinstall</span></a></li>
+      <li><a href="https://facebook.com/">Facebook　https://facebook.com/</a></li>
+      <li><a href="#top">TOP href="#top"</a></li>
+    </ul>
+  
+    <h1><span style="color:red;">部</span>分一致 [href<span style="color:red;">*</span>="com"] </h1>
+    <p>「*」…hrefが"dotinstall"で終わるもの</p>
+    <ul class="selector5">
+      <li><a href="https://dotinstall.com" target="_blank">dotinstall　https://dotinstall.<span style="color:red;">com</span></a></li>
+      <li><a href="https://twitter.com/dotinstall" target="_blank">Twitter　https://twitter.<span style="color:red;">com</span>/dotinstall</a></li>
+      <li><a href="https://facebook.com/">Facebook　https://facebook.<span style="color:red;">com</span>/</a></li>
+      <li><a href="#top">TOP href="#top"</a></li>
+    </ul>
+  
+    <hr>
+  
+    <table>
+      <tr>
+        <th>a,b</td>
+        <td>aとb</td>
+      </tr>
+      <tr>
+        <th>ab</td>
+        <td>
+          <p>bが付与されたa</p>
+          <p>例)h1.info</p>
+          <p>　 h1 class="info"</p>
+        </td>
+      </tr>
+      <tr>
+        <th>a>b</td>
+        <td>a の下の階層にある b</td>
+      </tr>
+      <tr>
+        <th>a の直後にある b</td>
+        <td>a+b</td>
+      </tr>
+    </table>
+  
+    <div class="pp">
+      <p>p+p…pの直後にあるpから適用される</p>
+      <p>p+p…pの直後にあるpから適用される</p>
+      <p>p+p…pの直後にあるpから適用される</p>
+    </div>
+  
+    <hr>
+  
+    <div class="bab">
+      <h1>::before ::after 擬似要素の使い方</h1>
+      <p>h1::before{content: '- ';}</p>
+      <p>h1::after{content: ' -';}</p>
+      <p>※content属性は必須</p>
+    </div>
+  
+    <div class="ba subttl">
+      <h1 data-subtitle=" - Main Title">見出し</h1>
+      <p>&lt;h1 data-subtitle=" - Main Title"&gt;</p>
+      <h2 data-subtitle=" - Sub Title">見出し</h2>
+      <p>&lt;h1 data-subtitle=" - Sub Title"&gt;</p>
+      <p>.ba h1::before, .ba h2::before {</p>
+      <p>content: '- ';</p>
+      <p>}</p>
+      <p>.ba h1::after, .ba h2::after {</p>
+      <p>content: attr(data-subtitle);</p>
+      <p>}</p>
+    </div>
+  
+    <hr>
+  
+    <h1>.btn:hover</h1>
+    <p>.btn {cursor: pointer;}</p>
+    <p>.btn:hover {opacity: 0.8;}</p>
+    <div class="btn">
+      <a href=""> :hover</a>
+    </div>
+  
+    <hr>
+  
+    <div class="child">
+      <h1>nth-child()…要素不要、nth-of-type()…要素必要</h1>
+      <p>こんにちは</p>
+      <p>.child > :nth-child(3) {}</p>
+      <p>こんにちは</p>
+      <p>こんにちは</p>
+      <p>.child > :nth-child(3n) {}</p>
+      <p>こんにちは</p>
+      <p>こんにちは</p>
+      <p>.child > :nth-child(3n) {}</p>
+    </div>
+    <hr>
+    <div class="child2">
+      <h2>nth-child(even奇数)</h2>
+      <h2>nth-child(even偶数)</h2>
+  
+      <p>.child2 > :nth-child(odd奇数) {}</p>
+      <p>.child2 > :nth-child(even偶数) {}</p>
+      <p>.child2 > :nth-child(odd奇数) {}</p>
+      <p>.child2 > :nth-child(even偶数) {}</p>
+      <p>.child2 > :nth-child(odd奇数) {}</p>
+    </div>
+    <hr>
+    <div class="child3">
+      <p> .child3 > :first-child {}</p>
+      <p>↑要素の指定なし</p>
+      <h2>.child3 > h2:first-of-type {}</h2>
+      <h2>↕要素の指定あり</h2>
+      <h2>.child3 > h2:last-of-type {}</h2>
+      <p>↓要素の指定なし</p>
+      <p> .child3 > :last-child {}</p>
+    </div>
+  <hr>
+    <div class="child4">
+      <h1>h1</h1>
+      <p>こんにちは。</p>
+      <h2>.child4 > h2:nth-of-type(odd) {}</h2>
+      <p>指定の要素（h2）の奇数(odd)番目を全て指定</p>
+      <h2>.child4 > h2:nth-of-type(2) {}</h2>
+      <p>h2の（2）番目を指定</p>
+      <h2>.child4 > h2:nth-of-type(odd) {}</h2>
+      <p>指定の要素（h2）の奇数(odd)番目を全て指定</p>
+      <p>偶数は(even)。</p>
+    </div>
+  
+    <hr>
+    <h1>空の要素を指定できる:empty()</h1>
+    <h1>否定を意味する:not()</h1>
+  
+    <div class="empty">
+      <ul>
+        <li>空の要素を指定できる:empty {}</li>
+        <li></li>
+        <li>アンケート結果などに使える</li>
+        <li>項目</li>
+      </ul>
+    </div>
+    <div class="not">
+      <ul>
+        <li>空の要素以外を指定できる:not(:empty) {}</li>
+        <li></li>
+        <li>項目</li>
+        <li>項目</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>詳細度…セレクターの優先度を決める</h2>
+    <p>id ＞ class, 属性, 疑似クラス ＞ 要素, 疑似要素</p>
+  
+    <h2>style属性…詳細度より優先</h2>  
+    <p>要素に直書きのstyle="color: skyblue;"</p>
+    <h2>!important…最強に優先</h2>  
+    <p>例）　h1 { color: red !important; }</p>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

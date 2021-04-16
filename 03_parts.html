@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>部品</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/03_parts.css">
+</head>
+<body>
+  <!-- start ヘッダー -->
+  <header class="header_main">
+    <div class="container">
+      <!-- ロゴエリア -->
+      <div class="header_logo_area">
+        <a class="logo_a" href="index.html">
+          <img src="img/MyHTML/logo.png" alt="">
+        </a>
+      </div>
+      <!-- ナビエリア -->
+      <nav class="header_nav_area">
+        <ul class="header_nav_ul">
+          <li>
+            <a href="">初めての方へ</a>
+          </li>
+          <li>
+            <a href="">新着情報</a>
+          </li>
+          <li>
+            <a href="">よくあるご質問</a>
+          </li>
+          <li>
+            <a href="">オンラインショップ</a>
+          </li>
+          <li>
+            <a class="btn_contact" href="">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- end ヘッダー -->
+
+
+
+
+  <div>
+    <input type="text" placeholder="例)東京都">
+    <input type="text" value="Hello">
+    <input type="password">
+  </div>
+  <div>
+    <label for="name">名前</label>
+    <input type="text" id="name">
+    <label>名前:<input type="text"></label>
+  </div>
+  <div>
+    <label for="color">好きな色</label>
+    <select name="" id="color" size="1">
+      <option value="" selected>色1</option>
+      <option value="">色1</option>
+      <option value="">色1</option>
+      <option value="">色1</option>
+      <option value="">色1</option>
+      <option value="">色1</option>
+      <option value="">色1</option>
+    </select>
+  </div>
+  <div>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <textarea name="" id="" cols="30" rows="10">Hello</textarea>
+  </div>
+  <div>
+    <fieldset>
+      <legend>お使いのスマホ（複数選択可）</legend>
+      <label><input type="checkbox" checked>iPhone</label>
+      <label><input type="checkbox">Andriod</label>
+      <label><input type="checkbox">その他</label>
+    </fieldset>
+  </div>
+  <div>
+    <fieldset>
+      <legend>一番好きなスマホ</legend>
+      <label><input type="radio" name="phone" checked>iPhone</label>
+      <label><input type="radio" name="phone">Andriod</label>
+      <label><input type="radio" name="phone">その他</label>
+    </fieldset>
+  </div>
+  <div>
+    <p>※古いブラウザでは使えない</p>
+    <p><input type="color"></p>
+    <p><input type="date"></p>
+    <p><input type="number"></p>
+    <p><input type="range"></p>
+  </div>
+  <div>
+    <input type="boutton" value="OK">
+    <!-- 画像が使える↓ -->
+    <button>OK</button>
+    <input type="boutton" value="OK" disabled>
+    <!-- 画像が使える↓ -->
+    <button disabled>OK</button>
+  </div>
+
+  <div>
+    <form action="process.php" method="POST">
+      <label for="">担当者 <input type="text" name="username"></label>
+      <label for="">タスク <input type="text" name="task"></label>
+      <button>追加</button>
+    </form>
+  </div>
+
+  
+</body>
+</html>

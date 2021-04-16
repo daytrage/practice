@@ -1,0 +1,119 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+body {
+  color: #333;
+  margin: 0;
+}
+
+/* ヘッダー ------------------------------ */
+
+/* 注意：タグに直接指定をしない方が良い */
+.header_a {
+  border-top: 4px solid orange;
+}
+
+.header_container {
+  max-width: 1280px;
+  padding: 0px 16px;
+  margin: 0 auto;
+
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+/* ロゴ ------------------------------ */
+.header_logo_area .logo {
+  /* aはインライン要素なのでブロック要素に代える */
+  display: block;
+}
+
+.header_logo_area .logo img {
+  /* 画像サイズは高さでしてする */
+  height: 25px;
+  /* 画像の下の余白を消す */
+  vertical-align: bottom;
+}
+
+
+/* ナビ ------------------------------ */
+.header_nav_area {
+  /* ナビエリアを右寄せ */
+  margin-left: auto;
+}
+
+.header_nav_ul {
+  display: flex;
+  align-items: center;
+}
+
+/* 隣接するliの左側に空白を付ける */
+.header_nav_ul > li + li {
+  margin-left: 40px;
+}
+
+
+.header_nav_ul_li_a {
+  color: #333;
+  font: 500 15px/1em 'noto sans japanese',sans-serif;
+  text-decoration: none;
+}
+
+
+a.header_nav_li_a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+/* ボタン */
+.header_nav_ul_li_a_btn {
+  background: hsl(210, 100%, 50%);
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0px 24px 0px 48px;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  position: relative;
+}
+
+.header_nav_ul_li_a_btn:before {
+  /* ★:beforeには必ずcontentが必要★ */
+  content: "";
+
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../img/MyCSS/logo.png) no-repeat center center;
+  /* 縦横比は保持して、背景領域に収まる最大サイズになるように背景画像を拡大縮小する */
+  background-size: contain;
+  position: absolute;
+  /* btnの中央(50%)に■の上辺を移動する */
+  top:50%;
+  left:10px;
+  /* ■本体を半分(50%)上へ移動する（X軸, Y軸） */
+  transform: translate(0, -50%);
+}
+
+
+
+/* プロフィール */
+
+.name {
+  background: #efefef;
+  padding: 32px 0px;
+}
+
+.container {
+  width: 400px;
+  display: flex;
+  margin: 0 auto;
+}

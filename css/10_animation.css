@@ -1,0 +1,397 @@
+@charset "utf-8";
+/* @import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css); */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+
+/* ヘッダー */
+.header_main {
+  background: #fff;
+}
+
+.header_main > .container {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+/* ロゴ */
+.logo_area  a {
+  display: block;
+}
+
+.logo_area img {
+  height: 60px;
+}
+
+
+/* ナビ */
+.nav_area {
+  margin-left: auto;
+}
+
+/* ナビ上段 */
+.nav_upper {
+  margin-bottom: 16px;
+}
+
+.nav_upper_ul {
+  display: flex;
+  align-items: center;
+  /* 右寄せ */
+  justify-content: flex-end;
+}
+
+
+
+.nav_upper_ul > li + li {
+  margin-left: 40px;
+}
+
+.nav_upper a {
+  color: #2c2c2c;
+  font: 300 13px/1em 'Noto Sans JP', sans-serif;
+}
+
+.nav_upper a:hover {
+  text-decoration: underline;
+}
+
+
+/* ナビ下段 */
+.nav_lower_ul {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #888;
+}
+
+.nav_lower_ul > li {
+  border-left: 1px solid #888;
+}
+
+.nav_lower_ul a {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 30px;
+  font: 500 15px/1em 'Noto Sans JP', sans-serif;
+  color: #2c2c2c;
+}
+
+.nav_lower_ul a:hover {
+  background: #ccc;
+}
+
+
+
+.container_main {
+  padding: 32px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: orange;
+}
+
+.box1 {
+  transition-property: border-radius;
+  transition-duration: 0.3s;
+}
+
+.box1:hover {
+  border-radius: 50%;
+}
+
+.box2 {
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+
+.box2:hover {
+  transform: translate(50px, 20px);
+}
+
+.box3 {
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+
+.box3:hover {
+  transform: rotate(30deg);
+}
+
+.box4 {
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+
+.box4:hover {
+  transform: scale(0.5, 2);
+}
+
+.box5 {
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+
+.box5:hover {
+  transform: translateX(100px) rotate(30deg);
+}
+
+.box6 {
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+
+.box6:hover {
+  transform: rotate(30deg) translateX(100px);
+}
+
+.box7 {
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transform-origin: top left;
+}
+
+.box7:hover {
+  transform: rotate(30deg);
+}
+
+.box8 {
+  transition-property: transform, background;
+  transition-duration: 1s;
+}
+
+.ttf_ease-out {
+  transition-timing-function: ease-out;
+}
+
+.ttf_ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.ttf_lineer {
+  transition-timing-function: lineer;
+}
+
+.ttf_cb {
+  transition-timing-function: cubic-bezier(0.34, 0.12, 0.63, 1.88);
+}
+
+.box8:hover {
+  transform: translateX(100px);
+  background: skyblue;
+}
+
+.box9 {
+  transition-property: transform;
+  transition-delay: 1s;
+  transition-duration: 0.3s;
+}
+
+.box9:hover {
+  transform: translateX(30px);
+}
+
+.box10 {
+  animation-name: move;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.box11 {
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+
+.box12 {
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.box13 {
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.box14 {
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+.box15 {
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease; /*既定値*/
+
+}
+
+.box16 {
+  /* @keyframesの名前を指定 */
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  /* 全てのキーフレーム間で動きの一定の速度になる */
+  animation-timing-function: linear;
+}
+
+/* 名前の付け方：英数字(ハイフン)(アンダーバー) */
+@keyframes move {
+  /* 0秒の時 */
+  0% {
+    /* 変形はしていない */
+    transform: none;
+  }
+  /* 1.6sの時 */
+  80% {
+    /* 右に80px移動 360度回転*/
+    transform: translateX(200px) rotate(360deg);
+  }
+  /* 2秒の時 */
+  100% {
+    /* さらに右へ100px移動 360度回転したまま*/
+    transform: translateX(300px) rotate(360deg);
+  }
+}
+
+.box17 {
+  animation: move 2s infinite 1s;
+}
+
+.btn1 {
+  padding: 16px 32px;
+  background: hsl(200, 100%, 40%);
+  color: white;
+  border-radius: 4px;
+  /* ★トレンド★　ボタンの影 （x y ぼかし 色） */
+  box-shadow: 0 1px 2px rgb(0, 0, 0, 0.1);
+  /* カーソルをポインタ */
+  cursor: pointer;
+  /* hoverにふわっとアニメーション0.3s */
+  transition: background 0.3s;
+}
+
+.btn1:hover {
+  background: hsl(200, 100%, 45%);
+}
+
+.loading {
+  width: 40px;
+  height: 40px;
+  border: 8px solid #ccc;
+  border-right-color: transparent; /* 色を消す */
+  border-radius: 50%;
+
+  animation: spin 0.8s infinite linear;
+  /* 
+  animation-name: spin;
+  animation-direction: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  */
+}
+
+@keyframes spin {
+  0% {
+    /* 変形していない状態 */
+    transform: none;
+  }
+  100% {
+    transform: rotate(360deg) ;
+  }
+}
+
+
+@keyframes spin {
+  /* 0% { */
+  from {
+    transform: none;
+  }
+  /* 100% { */
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.massage1 {
+  width: 300px;
+  padding: 8px 16px;
+  background: #2c2c2c;
+  color: #ddd;
+  border-radius: 4px;
+
+  /* X方向　Y方向　ぼかし　色 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.massage2 {
+  width: 300px;
+  padding: 8px 16px;
+  background: #2c2c2c;
+  color: #ddd;
+  border-radius: 4px;
+
+  /* X方向　Y方向　ぼかし　色 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  /* 位置指定 固定 */
+  position: fixed;
+  /*  位置指定 右から */ 
+  right: 32px;
+  /*  位置指定 下から */ 
+  bottom: 32px;
+
+  /* @keyframes popup に対応 */
+  animation-name: popup;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+
+}
+
+
+
+@keyframes popup {
+  /* 開始(0.20) */
+  0% {
+    transform: translateY(20px); 
+    opacity: 0;
+    /* ease-out…アニメーションは速く始まり、速度を落としながら続く。 */
+    animation-timing-function: ease-out;
+  }
+
+  /* 本来(0, 32)
+      ↑
+     開始(0, 20) */
+
+  20% {
+    transform: none;
+    opacity: 1;
+  }
+
+  /* 本来(0, 20) →留まる→ 本来(0, 20) */
+
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  /* 本来(0, 32)
+      ↓
+     終了(0, 20) */
+
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+}

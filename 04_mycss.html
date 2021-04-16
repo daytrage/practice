@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSSの練習</title>
+  <link rel="stylesheet" href="css/04_mycss.css">
+</head>
+<body>
+  <header>
+    <div class="box10">
+      <div>
+        <img src="img/crepha/logo-white.png" alt="">
+        <p>　画面固定　position: fixed</p>
+      </div>
+      <div class="header_right">
+        <p>右メニュー</p>
+      </div>
+    </div>
+    <div class="pic">
+      <img src="img/MyCSS/header.png" alt="">
+    </div>
+    <div class="box10a">
+      <p>
+        background-color: pink;<br>
+        background-image: url(../img/MyCSS/header.png);<br>
+        画像の縦横比を維持したままなるべく大きく表示したい<br>
+        background-size: cover;<br>
+        background-position: center;<br>
+      </p>
+    </div>
+
+
+
+  </header>
+  <div class="rect">絶対配置　position: absolute (親：static 初期値)</div>
+  <main>
+
+    <h1>position: fixed; 画面の左上を起点</h1>
+    <p>画面の左上を起点にtopから30px、leftから30pxで位置が固定される。<u><strong>基の位置は詰められて無くなる。</strong></u></p>
+    
+    
+    <div class="cont1">
+      <p>親要素</p>
+      <h1>子要素　border: inherit　親用要素から継承</h1>
+      <p>margin, padding, border, background などは、普段は子要素に継承されないが、inherit を指定することで、子要素でも margin, padding, border, background が適用される。</p>
+      <hr>
+      <h2>text-decoration: line-through</h2>
+      <p class="color2" style="color: green;">text-decoration: underline</p>
+      <a href="index.html">リンク</a>
+    </div>
+    
+    <div class="cont2">
+      <h1>CSSの練習</h1>
+      <p>こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。</p>
+    </div>
+    
+    <main>
+      こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。
+      <section>
+        こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。
+      </section>
+      <hr>
+    </main>
+    
+    <div class="cont3">
+      <p>Tokyo <img src="img/MyCSS/japan.png" alt=""> Japan </p>
+    </div>
+    
+    <hr>
+    
+    <div class="cont4">
+      <p>Tokyo <img src="img/MyCSS/japan.png" alt=""> Japan </p>
+    </div>
+
+  <hr>
+  
+  <div class="cont5">
+    <p style="background-color: hsla(1, 80%, 50%, 1.0);">あ</p>
+    <p style="background-color: hsla(20, 80%, 50%, 1.0);">あ</p>
+    <p style="background-color: hsla(40, 80%, 50%, 1.0);">あ</p>
+    <p style="background-color: hsla(90, 80%, 50%, 1.0);">あ</p>
+    <p style="background-color: hsla(180, 80%, 50%, 1.0);">あ</p>
+    <p style="background-color: hsla(270, 80%, 50%, 1.0);">あ</p>
+    <p style="background-color: hsla(1, 80%, 50%, 1.0);">あ</p>
+    <p style="background-color: hsla(1, 60%, 50%, 1.0);">あ</p>
+    <p style="background-color: hsla(1, 40%, 50%, 1.0);">あ</p>
+    <p style="background-color: hsla(1, 20%, 50%, 1.0);">あ</p>
+    <p style="background-color: hsla(1, 0%, 50%, 1.0);">あ</p>
+    <p style="background-color: hsla(180, 80%, 40%, 1.0);">あ</p>
+    <p style="background-color: hsla(180, 80%, 50%, 1.0);">あ</p>
+    <p style="background-color: hsla(180, 80%, 60%, 1.0);">あ</p>
+    <p style="background-color: hsla(180, 80%, 70%, 1.0);">あ</p>
+    <p style="background-color: hsla(180, 80%, 80%, 1.0);">あ</p>
+    <p style="background-color: hsla(30, 80%, 80%, 1.0);">あ</p>
+    <p style="background-color: hsla(60, 80%, 80%, 1.0);">あ</p>
+    <p style="background-color: hsla(90, 80%, 80%, 1.0);">あ</p>
+    <p style="background-color: hsla(120, 80%, 80%, 1.0);">あ</p>
+    <p style="background-color: hsla(150, 80%, 80%, 1.0);">あ</p>
+    <p class="fontlesson">Hello!</p>
+  </div>
+  <div>
+    <img src="img/MyCSS/header.png" alt="">  
+  </div>
+  <div class="cont6">
+    <img src="img/MyCSS/header.png" alt="">
+  </div>
+  <div>
+    <img class="cont7" src="img/MyCSS/header.png" alt="">
+  </div>
+  <hr>
+  <div class="cont8">
+    <div class="pic1">
+      <h1>float: right; clear:無</h1>
+      <p><img src="img/MyCSS/logo.png" width="100" height="100"> 先頭のimgに「float: right;」を指定して、右寄せ。</p>
+  
+      <h2>行が詰まる</h2>
+      <p>「float: right;」だけだと下の行が上に詰めてくる。ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</p>
+      <div style="clear: right;"></div>
+    </div>
+
+    <hr>
+    <div class="pic2">
+      <h1>float: right; clear:有</h1>
+      <p><img src="img/MyCSS/logo.png" width="100" height="100"> 先頭のimgに「float: right;」を指定して、右寄せ。</p>
+  
+      <h2>clear:right</h2>
+      <p>画像以降から行が始まる。※clearプロパティが使えるのはブロック要素だけ。例）h1,pなど。ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</p>
+    </div>
+  </div>
+  <hr>
+
+  <div class="nav1">
+    <ul>
+      <li>home</li>
+      <li>news</li>
+      <li>contact</li>
+      <li class="right">about</li>
+    </ul>
+    <div style="clear:both"></div>
+
+  </div>
+
+
+
+  <hr>
+  <div class="cont9">
+    <ul>
+      <li>こんにちは。こんにちは。こんにちは。</li>
+      <li>こんにちは。こんにちは。こんにちは。</li>
+      <li>こんにちは。こんにちは。こんにちは。</li>
+    </ul>
+    <ol>
+      <li>こんにちは。こんにちは。こんにちは。</li>
+      <li>こんにちは。こんにちは。こんにちは。</li>
+      <li>こんにちは。こんにちは。こんにちは。</li>
+    </ol>
+  </div>
+  <div class="cont10">
+    <ul>
+      <li>こんにちは。こんにちは。こんにちは。</li>
+      <li>こんにちは。こんにちは。こんにちは。</li>
+      <li>こんにちは。こんにちは。こんにちは。</li>
+    </ul>
+  </div>
+  <hr>
+  <div>
+    <h1 class="cont11">Hello!</h1>
+  </div>
+  <hr>
+  <div class="box">
+    <div class="box1">Box 1 Box 1 Box 1 Box 1Box 1 Box 1 Box 1 Box 1Box 1 Box 1 Box 1 Box 1Box 1 Box 1 Box 1 Box 1</div>
+    <div class="box2">Box 2 Box 2 Box 2 Box 2 Box 2 Box 2 Box 2 Box 2 Box 2 Box 2 Box 2 Box 2 Box 2 Box 2 Box 2</div>
+    <div class="box3">Box 3</div>
+  </div>
+
+  <hr>
+  <div class="box4">display: inline</div>
+  <div class="box4">display: inline</div>
+  <div class="box4">display: inline</div>
+  
+  <hr>
+  <div class="box5">inline-block</div>
+  <div class="box5">inline-block</div>
+  <div class="box5">inline-block</div>
+  
+  <hr>
+  
+  <img src="img/MyCSS/hsl.webp" alt="">
+  <div class="good">
+    <i class="thumds-up"></i>
+  </div>
+  
+  
+  
+  
+  <hr>
+  
+  <h2>親：relative　子：absolute　基の位置を基準</h1>
+    <p>親の位置を基準に移動。</p>
+    <div class="box6">
+      <p>親要素　position: relative</p>
+      <div class="box7">子要素　position: absolute</div>
+    </div>
+    
+    <hr>
+    <h2>親：relative　子：absolute　基の位置を基準</h2>
+    <p>要素の重なり順を変更できるz-index</p>
+    <div class="box13a">
+      <div class="box13">
+        <p>z-index: 3;</p>
+      </div>
+      <div class="box14">
+        <p>z-index: 2;</p>
+      </div>
+      <div class="box15">
+        <p>z-index: 1;</p>
+      </div>
+    </div>
+    
+    <hr>
+    <h2>最強のwidth指定　box-sizing: border-box;</h2>
+    <p>borderとpaddingを含むwidth指定ができる</p>
+    <div class="box16">
+      <p>width: 300px;</p>
+      <p>height: 100px;</p>
+    </div>
+    <div class="box17">
+      <p>box-sizing: border-box;</p>
+      <p>width: 300px;</p>
+    <p>height: 100px;</p>
+  </div>
+  
+  <hr>
+  <h2>calcで均等な幅</h2>
+  <p>20pxの隙間×２、それ以外は均等な幅のBOXにする計算</p>
+  <div class="box18">
+    <p>width: calc((100% - 40px) / 3);</p>
+  </div>
+  <div class="box19">
+    <p>width: calc((100% - 40px) / 3);</p>
+    <p>margin: 0 auto;</p>
+  </div>
+  <div class="box20">
+    <p>width: calc((100% - 40px) / 3);</p>
+    <p>margin-left: auto;</p>
+  </div>
+  
+  <hr>
+  <h2>box/textに影をつける　box-shadow　text-shadow</h2>
+  <p><strong style="color: red;">box</strong>-shadow: (X方向)　(Y方向)　(影のぼかし)　(影の拡大)　(色)</p>
+  <p><strong style="color: red;">text</strong>-shadow: (X方向)　(Y方向)　(影のぼかし)　(色)</p>
+
+  <div class="box21a">
+    <div class="box21">
+      <p>box-shadow: 10px 5px hsla(0, 0%, 0%, 0.3);</p>
+      <p>text-shadow: 10px 5px hsla(0, 0%, 0%, 0.3);</p>
+
+    </div>
+    <div class="box22">
+      <p>box-shadow: 10px 5px <strong style="color: red;">3px</strong> hsla(0, 0%, 0%, 0.3);</p>
+      <p>text-shadow: 10px 5px 3px hsla(0, 0%, 0%, 0.3);</p>
+    </div>
+  </div>
+
+  <hr>
+
+
+
+  <hr>
+  
+  
+  
+  
+  
+  
+  
+</main>
+  <footer>
+    <div  class="company_box">
+      <div class="company">〇〇〇〇会社</div>
+      <div class="company">〇〇〇〇会社</div>
+      <div class="company">display: inline</div>
+      <div class="company">text-align: center</div>
+    </div>
+  </footer>
+  
+  
+
+  
+  
+</body>
+</html>

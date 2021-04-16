@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>グリッドレイアウト</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/08_grid.css">
+  <link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header_b">
+    <div class="container">
+      <!-- ロゴエリア -->
+      <div class="header_logo_area">
+        <a class="header_logo_a" href="index.html">
+          <img src="img/MyHTML/logo.png" alt="">
+        </a>
+      </div>
+      <!-- ナビエリア -->
+      <nav class="header_nav_area">
+        <!-- ナビ上段 -->
+        <div class="upper_nav">
+          <ul class="upper_nav_ul">
+            <li>
+              <a href="">サポート</a>
+            </li>
+            <li>
+              <a href="">採用情報</a>
+            </li>
+            <li>
+              <a href="">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+        <!-- ナビ下段 -->
+        <div class="lower_nav">
+          <ul class="lower_nav_ul">
+            <li>
+              <a href="">初めての方へ</a>
+            </li>
+            <li>
+              <a href="">ビジョン</a>
+            </li>
+            <li>
+              <a href="">サービス</a>
+            </li>
+            <li>
+              <a href="">新作情報</a>
+            </li>
+            <li>
+              <a href="">よくあるご質問</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+    </div>
+
+  </header>
+
+
+
+
+  <div class="container1">
+    <div class="box1">100px</div>
+    <div class="box2">1fr</div>
+    <div class="box3">100px</div>
+    <div class="box4">100px</div>
+    <div class="box5">1fr</div>
+  </div>
+  <p>グリッドレイアウトは親要素が必要</p>
+  <p>grid-template-columns（列）: 100px 1fr 100px ;　２列</p>
+  <p>grid-template-rows（行）: 100px 100px;　３行</p>
+  <p>※fr…fraction フラクション。余白を割り当てる。</p>
+  <hr>
+  <div class="container2">
+    <div class="box1">100px</div>
+    <div class="box2">1fr</div>
+    <div class="box3">2fr</div>
+    <div class="box4">100px</div>
+    <div class="box5">1fr</div>
+  </div>
+  <p>grid-template-columns: 100px 1fr 2fr ;</p>
+  <p> 2fr 1fr　は、余白の割合（２：１）。</p>
+  <hr>
+  <h2>グリッドレイアウトの余白　親要素　gap: 10px;</h2>
+
+  <div class="container3">
+    <div class="box1">100px</div>
+    <div class="box2">1fr</div>
+    <div class="box3">2fr</div>
+    <div class="box4">100px</div>
+    <div class="box5">1fr</div>
+  </div>
+
+  <hr>
+  <h2>縦横異なる余白　親要素　gap: 20px（上下） 40px（左右）;</h2>
+  <div class="container4">
+    <div class="box1">100px</div>
+    <div class="box2">1fr</div>
+    <div class="box3">2fr</div>
+    <div class="box4">100px</div>
+    <div class="box5">1fr</div>
+  </div>
+
+  <hr>
+  <h2>grid-template-columns: repeat(4, 100px);</h2>
+  <p>100pxを4カラム（列）の意味</p>
+  <div class="container5">
+    <div class="box1">100px</div>
+    <div class="box2">100px</div>
+    <div class="box3">100px</div>
+    <div class="box4">100px</div>
+    <div class="box5">100px</div>
+    <div class="box5">100px</div>
+  </div>
+
+  <hr>
+  <h2>grid-template-columns: repeat(auto, 100px);</h2>
+  <p>親要素に入る限り</p>
+  <div class="container6">
+    <div class="box1">100px</div>
+    <div class="box2">100px</div>
+    <div class="box3">100px</div>
+    <div class="box4">100px</div>
+    <div class="box5">100px</div>
+    <div class="box5">100px</div>
+  </div>
+
+
+  <hr>
+  <h2> grid-template-columns: repeat(auto-<span style="color: red;">fill</span>, minmax(100px, 1fr));</h2>
+  <p>列の幅を100pxから1frの範囲で均等に伸ばしてね、</p>
+  <p>余白が100pxできたら一列増やしてね、という意味</p>
+  <div class="container7">
+    <div class="box1">100px</div>
+    <div class="box2">100px</div>
+    <div class="box3">100px</div>
+    <div class="box4">100px</div>
+    <div class="box5">100px</div>
+    <div class="box5">100px</div>
+    <div class="box5">100px</div>
+    <div class="box5">100px</div>
+    <div class="box5">100px</div>
+  </div>
+
+  <hr>
+  <h2> grid-template-columns: repeat(auto-<span style="color: red;">fit</span>, minmax(100px, 1fr));</h2>
+  <p>列の幅を100pxから1frの範囲で均等に伸ばしてね、</p>
+  <p>余白が100pxできたら一列増やしてね、</p>
+  <p>増やす列が無くなったら横幅いっぱいに1frで均等に伸ばしてね、という意味</p>
+  <div class="container8">
+    <div class="box1">100px</div>
+    <div class="box2">100px</div>
+    <div class="box3">100px</div>
+    <div class="box4">100px</div>
+    <div class="box5">100px</div>
+    <div class="box5">100px</div>
+    <div class="box5">100px</div>
+    <div class="box5">100px</div>
+    <div class="box5">100px</div>
+  </div>
+
+  <hr>
+  <h2>grid-auto-rows: 100px;</h2>
+  <p>何行になるか分からない時に便利。</p>
+  <div class="container8">
+    <div class="box1">100px</div>
+    <div class="box2">100px</div>
+    <div class="box3">100px</div>
+    <div class="box4">100px</div>
+    <div class="box5">100px</div>
+    <div class="box1">100px</div>
+    <div class="box2">100px</div>
+    <div class="box3">100px</div>
+    <div class="box4">100px</div>
+    <div class="box5">100px</div>
+    <div class="box1">100px</div>
+    <div class="box2">100px</div>
+    <div class="box3">100px</div>
+    <div class="box4">100px</div>
+    <div class="box5">100px</div>
+    <div class="box1">100px</div>
+    <div class="box2">100px</div>
+    <div class="box3">100px</div>
+    <div class="box4">100px</div>
+    <div class="box5">100px</div>
+  </div>
+
+
+  <hr>
+  <h2>【子】grid-column(縦線) と grid-row（横線）</h2>
+  <p>右から、grid-column: 2;</p>
+  <p>上から、grid-row: 2;</p>
+  <div class="container9">
+    <div class="box11">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+  </div>
+
+  <hr>
+  <h2>グリッドの結合方法</h2>
+  <p>grid-column: 2 / 4;　左２～４番目</p>
+  <p>grid-column: 2 / -1;　左２～右端まで</p>
+  <p>grid-column: 2 / span 2 ;　左2～２マス分</p>
+
+  <div class="container9">
+    <div class="box12">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+  </div>
+
+  <hr>
+  <h2>グリッドラインに名前をつける</h2>
+  <p>親　grid-template-columns: 100px [target-start] 100px 100px [target-end];</p>
+  <p>子　grid-column: target-start / target-end;</p>
+  <p>子　grid-column: target;　※上と同じ意味</p>
+
+  <div class="container10">
+    <div class="box111">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+  </div>
+  
+  <hr>
+  <h2>並び順を横から縦方向へ</h2>
+  <p>親　grid-auto-flow: row;（初期値：横方向→）</p>
+  <p>親　grid-auto-flow: column;(縦方向↓)</p>
+
+
+  <div class="container11">
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+  </div>
+
+  <hr>
+  <h2>子を大きくする方法</h2>
+  <p></p>
+  <p>子　grid-column: span 2;（縦方向２マス）</p>
+  <p>子　grid-row: span 2;（横方向２マス）</p>
+
+
+  <div class="container12">
+    <div class="box1">1</div>
+    <div class="box21">2</div>
+    <div class="box31">親　grid-auto-columns: 100px;<br>
+    これを指定しなかったら、横幅いっぱいに広がる</div>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+  </div>
+
+  <hr>
+  <h2>子を大きくする&詰める方法</h2>
+  <p></p>
+  <p>親　grid-auto-flow: column dence;</p>
+
+  <div class="container13">
+    <div class="box1">1</div>
+    <div class="box21">2</div>
+    <div class="box31">親　grid-auto-columns: 100px;<br>
+    これを指定しなかったら、横幅いっぱいに広がる</div>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+  </div>
+
+  <hr>
+  <h2>親　grid-template-areas:"r r r y y"</h2>
+  <p>子要素の配置を直感的に表現できる</p>
+  <p>配置したくない時はピリオド（.）を入れる、ただしＬ字や途中を消すことはできない</p>
+  <h2>子　grid-area: r;</h2>
+  <p>子要素に名前をつける</p>
+
+  <div class="container14">
+    <div class="box1401">r</div>
+    <div class="box1402">y</div>
+    <div class="box1403">g</div>
+    <div class="box1404">c</div>
+    <div class="box1405">b</div>
+  </div>
+
+
+  <hr>
+  <h2>親　justify-content: <span style="color: red;">start;</span></h2>
+  <p>「グリッド」を 左寄せ</p>
+  <h2>親　justify-items: <span style="color: red;"></span>start;</span></h2>
+  <p>グリッド内の「要素・全部」を 左寄せ</p>
+  <h2>親　align-items: <span style="color: red;"></span>start;</span></h2>
+  <p>グリッド内の「要素・全部」を 上寄せ</p>
+  <div class="container15 js1">
+    <div class="box1 boxsize">1</div>
+    <div class="box2 boxsize">2</div>
+    <div class="box3 boxsize">3</div>
+    <div class="box4 boxsize">4</div>
+    <div class="box5 boxsize">5</div>
+  </div>
+
+  <h2>親　justify-content: <span style="color: red;">end;</span></h2>
+  <p>「グリッド」を右寄せ</p>
+  <h2>親　justify-items: <span style="color: red;"></span>end;</span></h2>
+  <p>グリッド内の「要素・全部」を右寄せ</p>
+  <h2>親　align-items: <span style="color: red;"></span>end;</span></h2>
+  <p>グリッド内の「要素・全部」を 下寄せ</p>
+  <div class="container15 js2">
+    <div class="box1 boxsize">1</div>
+    <div class="box2 boxsize">2</div>
+    <div class="box3 boxsize">3</div>
+    <div class="box4 boxsize">4</div>
+    <div class="box5 boxsize">5</div>
+  </div>
+
+  <h2>親　justify-content: <span style="color: red;">center;</span></h2>
+  <p>「グリッド」を中央寄せ</p>
+  <h2>親：列　justify-items: <span style="color: red;"></span>center;</span></h2>
+  <p>グリッド内の「要素・全部」を中央寄せ</p>
+  <div class="container15 js3">
+    <div class="box1 boxsize">1</div>
+    <div class="box2 boxsize">2</div>
+    <div class="box3 boxsize">3</div>
+    <div class="box4 boxsize">4</div>
+    <div class="box5 boxsize">5</div>
+  </div>
+
+  <h2>親　justify-content: <span style="color: red;">space-between;</span></h2>
+  <p>「グリッド」列にスペースが入る</p>
+  <h2>グリッド内で要素単体の位置を決める</h2>
+  <h2>子　justify-self: <span style="color: red;">start;</span></h2>
+  <h2>子　align-self: <span style="color: red;">start;</span></h2>
+  <p>start・center・endの３種類</p>
+
+  <p>グリッド内の「要素・単体」を中央寄せ</p>
+
+
+
+  <div class="container15 js4">
+    <div class="box1 boxsize as1">左上<br>start</div>
+    <div class="box2 boxsize as3">中央<br>center</div>
+    <div class="box3 boxsize as2">右上<br>end</div>
+    <div class="box4 boxsize">4</div>
+    <div class="box5 boxsize">5</div>
+  </div>
+
+  <h2>親　align-content: <span style="color:orange;">start;</span></h2>
+  <div class="container15 ac1">
+    <div class="box1 boxsize">1</div>
+    <div class="box2 boxsize">2</div>
+    <div class="box3 boxsize">3</div>
+    <div class="box4 boxsize">4</div>
+    <div class="box5 boxsize">5</div>
+  </div>
+
+  <h2>親　align-content: <span style="color:orange;">end;</span></h2>
+  <div class="container15 ac2">
+    <div class="box1 boxsize">1</div>
+    <div class="box2 boxsize">2</div>
+    <div class="box3 boxsize">3</div>
+    <div class="box4 boxsize">4</div>
+    <div class="box5 boxsize">5</div>
+  </div>
+
+  <h2>親　align-content: <span style="color:orange;">center;</span></h2>
+  <div class="container15 ac3">
+    <div class="box1 boxsize">1</div>
+    <div class="box2 boxsize">2</div>
+    <div class="box3 boxsize">3</div>
+    <div class="box4 boxsize">4</div>
+    <div class="box5 boxsize">5</div>
+  </div>
+
+  <h2>親　align-content: <span style="color:orange;">space-between;</span></h2>
+  <div class="container15 ac4">
+    <div class="box1 boxsize">1</div>
+    <div class="box2 boxsize">2</div>
+    <div class="box3 boxsize">3</div>
+    <div class="box4 boxsize">4</div>
+    <div class="box5 boxsize">5</div>
+  </div>
+
+  <h2>親：全体　justify-content: <span style="color:orange;">center;</span></h2>
+  <h2>親：列　justify-items: <span style="color:orange;">center;</span></h2>
+  <h2>親：行　align-content: <span style="color:orange;"> center;</span></h2>
+
+  <div class="container15  js3 ac3">
+    <div class="box1 boxsize">1</div>
+    <div class="box2 boxsize">2</div>
+    <div class="box3 boxsize">3</div>
+    <div class="box4 boxsize">4</div>
+    <div class="box5 boxsize">5</div>
+  </div>
+
+</body>
+</html>

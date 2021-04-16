@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 表示領域をスマホの画面幅に合わせる設定 -->
+  <meta name="viewport" content="width=device-wid
+  th, initial-scale=1.0">
+  <!-- 表示領域をスマホの画面幅に合わせる設定 -->
+  <title>レスポンシブウェブデザイン</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/07_1_rwd.css">
+  <link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header_main">
+    <div class="container">
+      <!-- ロゴエリア -->
+      <div class="logo_area">
+        <a class="logo" href="index.html">
+          <img src="img/MyHTML/logo.png" alt="">
+        </a>
+        <p class="copy">5,000円以上購入で送料無料</p>
+      </div>
+      <!-- ナビエリア -->
+      <nav class="nav_area">
+        <!-- ナビメイン -->
+        <ul class="nav_main_ul">
+          <li>
+            <a href="">BRAND</a>
+          </li>
+          <li>
+            <a href="">CATEGORY</a>
+          </li>
+          <li>
+            <a href="">ALL ITEM</a>
+          </li>
+          <li>
+            <a href="">TOPICS</a>
+          </li>
+        </ul>
+        <!-- ナビアイコン -->
+        <ul class="nav_icon_ul">
+          <li class="search"><a href=""></a></li>
+          <li class="favorit"><a href=""></a></li>
+          <li class="cart"><a href=""></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  
+  <h1>viewportの設定</h1>
+  <p>表示領域をスマホの画面幅に合わせるための設定</p>
+  <p>meta name="viewport" content="width=device-wid
+    th, initial-scale=1.0"</p>
+    <p>注意：確認の時はブラウザのズーム率を100%にする。</p>
+    <h2>CSS側</h2>
+  <p>600px以上、800px以下</p>
+  <p>@media (min-width: 600px) and (max-width: 800px) {<br>
+    body {<br>
+      background: skyblue;<br>
+    } <br>
+  }</p>
+</body>
+</html>

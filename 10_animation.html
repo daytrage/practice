@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アニメーション</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/10_animation.css">
+  <link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header_main">
+    <div class="container">
+      <!-- ロゴ -->
+      <div class="logo_area">
+        <a href="index.html">
+          <img src="img/MyHTML/logo.png" alt="">
+        </a>
+      </div>
+      <!-- ナビ -->
+      <nav class="nav_area">
+        <!-- 上段 -->
+        <div class="nav_upper">
+          <ul class="nav_upper_ul">
+            <li>
+              <a href="">サポート</a>
+            </li>
+            <li>
+              <a href="">採用情報</a>
+            </li>
+            <li>
+              <a href="">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+        <!-- 下段 -->
+        <div class="nav_lower">
+          <ul class="nav_lower_ul">
+            <li>
+              <a href="">初めての方へ</a>
+            </li>
+            <li>
+              <a href="">ビジョン</a>
+            </li>
+            <li>
+              <a href="">サービス</a>
+            </li>
+            <li>
+              <a href="">新着情報</a>
+            </li>
+            <li>
+              <a href="">よくあるご質問</a>
+            </li>
+            <li>
+              <a href="">オンラインショップ</a>
+            </li>
+            <li>
+              <a href="">会社情報</a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+  <div class="container_main">
+  <h1></h1>
+  <div class="box box1"></div>
+  
+  <pre>
+    .box1 {
+      transition-property: border-radius;
+      transition-duration: 1s;
+    }
+    
+    .box1:hover {
+      border-radius: 50%;
+    }
+  </pre>
+  
+  <hr>
+  <h1></h1>
+  <div class="box box2"></div>
+  <pre>
+    .box2 {
+      transition-property: transform;
+      transition-duration: 1s;
+    }
+    
+    .box2:hover {
+      transform: translate(50px, 20px);
+    }
+  </pre>
+  
+  <hr>
+  <h1></h1>
+  <div class="box box3"></div>
+  
+  <pre>
+    .box3 {
+      transition-property: transform;
+      transition-duration: 1s;
+    }
+    
+    .box3:hover {
+      transform: rotate(30deg);
+    }
+  </pre>
+  
+  
+  <hr>
+  <h1></h1>
+  <div class="box box4"></div>
+  
+  <pre>
+    .box4 {
+      transition-property: transform;
+      transition-duration: 1s;
+    }
+    
+    .box4:hover {
+      transform: scale(0.5, 2);
+    }
+  </pre>
+  
+  <hr>
+  <h1></h1>
+  <div class="box box5"></div>
+  
+  <pre>
+    .box5 {
+      transition-property: transform;
+      transition-duration: 1s;
+    }
+    
+    .box5:hover {
+      transform: translateX(100px) rotate(30deg);
+    }
+  </pre>
+  
+  <hr>
+  <h1></h1>
+  <div class="box box6"></div>
+  
+  <pre>
+    .box6 {
+      transition-property: transform;
+      transition-duration: 1s;
+    }
+    
+    .box6:hover {
+      transform: rotate(30deg) translateX(100px);
+    }
+  </pre>
+  
+  
+  <hr>
+  
+  <h1></h1>
+  <div class="box box7"></div>
+  
+  <pre>
+    .box7 {
+      transition-property: transform;
+      transition-duration: 1s;
+      transform-origin: top left; ←左上を起点にする
+    }
+    
+    .box7:hover {
+      transform: rotate(30deg);
+    }ansform: rotate(30deg) translateX(100px);
+  }
+</pre>
+
+<hr>
+<h1></h1>
+<div class="box box8"></div>
+
+<pre>
+  .box8 {
+    transition-property: transform, background;
+    transition-duration: 1s;
+    transition-timing-function: ease;　←デフォルト
+  }
+  
+  .box8:hover {
+    transform: translateX(30px);
+    background: skyblue;
+  }
+  
+    【googleのバグ回避方法】
+    &lt;script&gt; &lt;/script&gt;
+  </pre>
+  
+  
+  <hr>
+  
+  <h1></h1>
+  <div class="box box8 ttf_ease-out"></div>
+  <pre>
+    .box8 {
+      transition-timing-function: ease-out;　←小さいUI部品によく使われる
+    }
+  </pre>
+  
+  <h1></h1>
+  <div class="box box8 ttf_ease-in-out"></div>
+  <hr>
+  <pre>
+    .ttf_ease-in-out {
+      transition-timing-function: ease-in-out;　←大きいUI部品によく使われる
+    }
+  </pre>
+  
+  
+  <hr>
+  <h1></h1>
+  <div class="box box8 ttf_lineer"></div>
+  
+  <pre>
+    .ttf_lineer {
+      transition-timing-function: lineer;　←回転するUI部品によく使われる、ローディングアイコン等
+    }
+  </pre>
+  
+  <hr>
+  <h1></h1>
+  <div class="box box8 ttf_cb"></div>
+  
+  <pre>
+    .ttf_cb {
+      transition-timing-function: cubic-bezier(0.34, 0.12, 0.63, 1.88);　←検証画面の中から調整できる
+    }
+  </pre>
+  <h1></h1>
+  <div class="box box9"></div>
+  
+  <pre>
+    .box9 {
+      transition-property: transform;
+      transition-delay: 0.3s;　←アニメーションを開始するまでの時間
+      transition-duration: 1s;　←アニメーションさせる時間
+      
+    }
+    
+    .box9:hover {
+      transform: translateX(30px);
+    }
+    
+  </pre>
+  
+  <hr>
+  <h2>transition: transform 0.3s ease-out 1s, background 0.5s;</h2>
+  <p>
+    transition-property: transform;　←対象のプロパティ<br>
+    transition-durarion: 0.3s;　←アニメーションの時間<br>
+    transition-timing-function: ease-out;　←動きの種類<br>
+    transition-delay:1s;　←アニメーション開始までの時間
+  </p>
+  <p>
+    :hover
+    transform: translateX(100px);
+    background: skyblue;
+  </p>
+  <hr>
+  
+  <h1>@keyframes 直進回転→直進</h1>
+  <div class="box box10"></div>
+  
+  <pre>
+    .box10 {
+      animation-name: move;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;　←2s後の状態を維持する
+    }
+    
+    
+    /* 名前の付け方：英数字(ハイフン)(アンダーバー) */
+    @keyframes move {
+      /* 0秒の時 */
+      0% {
+        /* 変形はしていない */
+        transform: none;
+      }
+      /* 1.6sの時 */
+      80% {
+        /* 右に80px移動 360度回転*/
+        transform: translateX(200px) rotate(360deg);
+      }
+      /* 2秒の時 */
+      100% {
+        /* さらに右へ100px移動 360度回転したまま*/
+        transform: translateX(300px) rotate(360deg);
+      }
+    }
+  </pre>
+  
+  
+  <hr>
+  
+  <h1>animation-iteration-count: 2;</h1>
+  <p>同じ動きを【２回】繰り返す</p>
+  <div class="box box11"></div>
+  
+  <pre>
+    .box11 {
+      animation-name: move;
+      animation-duration: 2s;
+      animation-iteration-count: 2;　←同じ動きを２回繰り返す
+    }
+  </pre>
+  
+  
+  <hr>
+  <h1>animation-iteration-count: infinite;</h1>
+  <p>同じ動きを【無限】に繰り返す</p>
+  <div class="box box12"></div>
+  <pre>
+    .box11 {
+      animation-name: move;
+      animation-duration: 2s;
+      animation-iteration-count: 2;　←同じ動きを２回繰り返す
+    }
+  </pre>
+  
+  <hr>
+  <h1>animation-direction: alternate;</h1>
+  <p>巻き戻すように動く</p>
+  <div class="box box13"></div>
+  <pre>
+    .box13 {
+      animation-name: move;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  </pre>
+  
+  <hr>
+  <h1>animation-direction: reverse;</h1>
+  <p>右からスタートする</p>
+  <div class="box box14"></div>
+  <pre>
+    .box14 {
+      animation-name: move;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: reverse;
+    }
+  </pre>
+  
+  <hr>
+  <h1>animation-direction: alternate-reverse;</h1>
+  <p>右からスタート→巻き戻し</p>
+  <p>
+    animation-timing-function: ease;　（既定値）<br>
+    初めはゆっくりな速度から始まって加速した後に再度減速して停止する
+  </p>
+  <div class="box box15"></div>
+  
+  <pre>
+    .box15 {
+      animation-name: move;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+    }
+  </pre>
+  <p>キーフレームの0%～80%の間だけにしたいなら</p>
+  
+  <pre>
+    @keyframes move {
+      /* 0秒の時 */
+      0% {
+        animation-timing-function: linear;　←ここに書く
+        transform: none;
+      }
+      /* 1.6sの時 */
+      80% {
+        transform: translateX(200px) rotate(360deg);
+      }
+      /* 2秒の時 */
+      100% {
+        transform: translateX(300px) rotate(360deg);
+      }
+    }
+  </pre>
+  
+  
+  <hr>
+  <h1>animation-timing-function: linear;</h1>
+  <p>全てのキーフレーム間でアニメーションが一定の速度になる</p>
+  <p>
+    animation-timing-function: ease;　（既定値）<br>
+    初めはゆっくりな速度から始まって加速した後に再度減速して停止する
+  </p>
+  <div class="box box16"></div>
+  <pre>
+    .box16 {
+      animation-name: move;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-timing-function: linear;
+    }
+  </pre>
+  <pre>
+    @keyframes move {
+      /* 0秒の時 */
+      0% {
+        /* 変形はしていない */
+        transform: none;
+      }
+      /* 1.6sの時 */
+      80% {
+        /* 右に80px移動 360度回転*/
+        transform: translateX(200px) rotate(360deg);
+      }
+      /* 2秒の時 */
+      100% {
+        /* さらに右へ100px移動 360度回転したまま*/
+        transform: translateX(300px) rotate(360deg);
+      }
+    }
+  </pre>
+  
+  <p>キーフレームの0%～80%の間だけにしたいなら</p>
+  
+  <pre>
+    @keyframes move {
+      /* 0秒の時 */
+      0% {
+        animation-timing-function: linear;　←ここに書く
+        transform: none;
+      }
+      /* 1.6sの時 */
+      80% {
+        transform: translateX(200px) rotate(360deg);
+      }
+      /* 2秒の時 */
+      100% {
+        transform: translateX(300px) rotate(360deg);
+      }
+    }
+  </pre>
+  
+  <hr>
+  <h1>animation: の一括指定</h1>
+  <p>animation-name: move2;<br>
+    animation-duration: 2s;<br>
+    animation-iteration-count: infinite;<br>
+    ---- 一括指定：順不同、省略可 ----<br>
+    ---- 数字は ①duration ②delay の順 ----<br>
+    animation: move2 2s infinite 1s;</p>
+    
+    <div class="box box17"></div>
+    <pre>
+      .box17 {
+        animation: move 2s infinite 1s;
+      }    
+    </pre>
+
+    
+    <hr>
+    <h1>【実践】ふわっとボタン</h1>
+    <div>
+      <span class="btn1">OK</span>
+    </div>
+    <br>
+    <pre>
+      .btn1 {
+        padding: 16px 32px;
+        background: hsl(200, 100%, 40%);
+        color: white;
+        border-radius: 4px;
+        /* ★トレンド★　ボタンの影 （x y ぼかし 色） */
+        box-shadow: 0 1px 2px rgb(0, 0, 0, 0.1);
+        /* カーソルをポインタ */
+        cursor: pointer;
+        /* hoverにふわっとアニメーション0.3s */
+        transition: background 0.3s;
+      }
+    </pre>
+    <pre>
+      .btn1:hover {
+        background: hsl(200, 100%, 45%);
+      }
+    </pre>
+    
+    
+    
+    <hr>
+    <h1>回転するローディングアイコン</h1>
+    <div class="loading"></div>
+    <br>
+    <pre>
+      .loading {
+        width: 40px;
+        height: 40px;
+        border: 8px solid #ccc;
+        border-right-color: transparent; /* 色を消す */
+      border-radius: 50%;
+      
+      animation: spin 0.8s infinite linear;
+      /* 
+      animation-name: spin;
+      animation-direction: 0.8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      */
+    }
+  </pre>
+  <pre>
+    @keyframes spin {
+      0% {
+        /* 変形していない状態 */
+        transform: none;
+      }
+      100% {
+        transform: rotate(360deg) ;
+      }
+    }
+  </pre>
+  <p>別の書き方で同じ意味　（0%　100%）⇒（from　to）</p>
+  <pre>
+    @keyframes spin {
+      /* 0% { */
+        from {
+          transform: none;
+        }
+        /* 100% { */
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      </pre>
+      
+      
+      <hr>
+      <h1>ポップアップ</h1>
+      <div class="massage1">Hello</div>
+      <div class="massage2">Hello</div>
+      <br>
+      <pre>
+        .loading {
+          width: 40px;
+          height: 40px;
+          border: 8px solid #ccc;
+          border-right-color: transparent; /* 色を消す */
+          border-radius: 50%;
+          
+          animation: spin 0.8s infinite linear;
+          /* 
+          animation-name: spin;
+          animation-direction: 0.8s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          */
+        }
+      </pre>
+
+    </div>
+      
+      
+      
+      
+      
+      
+      <!-- googleのバグ回避 -->
+      <script> </script>
+      <!-- googleのバグ回避 -->
+    </body>
+    </html>

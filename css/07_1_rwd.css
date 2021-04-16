@@ -1,0 +1,100 @@
+@media (min-width: 600px) and (max-width: 800px) {
+  body {
+    background: skyblue;
+  }
+}
+
+/* ヘッダー */
+.header_main {
+  background: #fff;
+}
+
+.header_main .container {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding: 0 32px;
+}
+
+
+/* ロゴエリア */
+.logo_area {
+  display: flex;
+  align-items: center;
+}
+
+.logo_area .logo {
+  display: block;
+}
+
+.logo_area img {
+  height: 32px;
+  vertical-align: bottom;
+}
+
+.logo_area .copy {
+  color: #333;
+  font: 300 12px/1em 'Noto Sans JP', sans-serif;
+  margin: 0 0 0 32px;
+}
+
+/* ナビエリア */
+.nav_area {
+  display: flex;
+  align-items: center;
+  /* ★領域拡大 */
+  flex: auto;
+}
+
+/* ナビメイン */
+.nav_main_ul {
+  display: flex;
+  align-items: center;
+  /* ★水平中央揃え */
+  margin: 0 auto;
+}
+
+.nav_main_ul > li + li {
+  margin-left: 40px;
+}
+
+.nav_main_ul a {
+  color: #333;
+  font: 500 16px/1em 'Noto Sans JP', sans-serif;
+}
+
+/* ナビアイコン */
+.nav_icon_ul {
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  margin-left: auto;
+  border-left: 1px solid #ccc;
+}
+
+.nav_icon_ul > li + li {
+  margin-left: 10px;
+}
+
+.nav_icon_ul a {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.nav_icon_ul .search a {
+  background: url(../svg/ico_search.svg) no-repeat center center;
+  background-size: contain;
+}
+
+.nav_icon_ul .favorit a {
+  background: url(../svg/ico_heart.svg) no-repeat center center;
+  background-size: contain;
+}
+
+.nav_icon_ul .cart a {
+  background: url(../svg/ico_cart.svg) no-repeat center center;
+  background-size: contain;
+}
+
+

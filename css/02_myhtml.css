@@ -1,0 +1,90 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+.header {
+  border-top: 4px solid orange;
+  background: hsl(30, 100%, 90%);
+}
+
+.container {
+  max-width: 1280px;
+  height: 60px;
+  padding: 0px 16px;
+
+  display: flex;
+  /* 横　中央 */
+  margin: 0 auto;
+  /* 縦　中央 */
+  align-items: center;
+
+
+}
+
+/* logo------------------------------ */
+
+.header_logo_area img {
+  display: block;
+ }
+
+
+.header_logo_area img {
+  height: 32px;
+  vertical-align: bottom;
+}
+
+/* nav------------------------------ */
+.header_nav_area {
+  margin-left: auto;
+}
+
+.header_nav_area ul {
+  display: flex;
+  align-items: center;
+}
+
+.header_nav_area li + li {
+  margin-left: 40px;
+}
+
+.header_nav_area a {
+  color: #333;
+  font: 500 16px/1em 'noto sans japanese',sans-serif;
+  text-decoration: none;
+}
+
+.header_nav_area a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* ボタン------------------------------ */
+.header_nav_area .btn {
+  height: 36px;
+  padding: 0 24px 0 48px;
+  color: #fff;
+  background: hsl(210, 100%, 50%);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header_nav_area .btn:hover {
+  background: hsl(210, 100%, 60%);
+  text-decoration: none;
+}
+
+.header_nav_area .btn::before {
+  content: "";
+  display: block;
+  background: url(../img/MyCSS/icon.png) no-repeat center center;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translate(0, -50%);
+}
+

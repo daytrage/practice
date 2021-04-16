@@ -1,0 +1,66 @@
+.body {
+  background: hsl(0, 0%, 90%);
+  /* 幅 */
+  max-width: 1200px;
+  margin: 0 auto;
+  /* 高さ */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: hsl(0, 100%, 90%);
+  height: 100px;
+}
+
+.columns {
+  /* 子要素 親要素.body の display: flex;*/
+  flex: 1;
+  /* 親要素 */
+  display: flex;
+}
+
+.nav {
+  width: 150px;
+  background: hsl(0, 100%, 85%);
+}
+
+.main {
+  flex: 1;
+  background: hsl(0, 100%, 80%);
+}
+
+.aside {
+  width: 200px;
+  background: hsl(0, 100%, 85%);
+}
+
+.footer {
+  height: 100px;
+  background: hsl(0, 100%, 90%);
+}
+
+
+
+/* 900px以下の場合 */
+@media screen and (max-width: 1200px) {
+
+  .body,.nav,.aside {
+    /* スマホの画面いっぱいにして横スクロールをなくす */
+    width: 100%;
+  }
+
+  .columns {
+    /* 横並びを縦並びに戻す */
+    flex-direction: column;
+  }
+
+  .main {
+    /* 順番を先頭にする */
+    order: -1;
+  }
+
+
+  
+}

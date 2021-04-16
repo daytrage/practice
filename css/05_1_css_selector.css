@@ -1,0 +1,171 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+.container {
+  padding: 0 16px;
+}
+
+
+.before,.after,.data_kei,.list_kei,.list_icon_kei,.hover_kei,.ne_margin {
+  margin-bottom: 40px;
+}
+
+.b_price,.price_a {
+  font: 500 20px/1em 'Noto Sans JP', sans-serif;
+}
+
+.b_price::before {
+  /* ※content属性は必須 */
+  content: "￥";
+  font-size: 13px;
+}
+
+.price_a::after {
+ /* ※content属性は必須 */
+  content: "円";
+  font-size: 13px;
+}
+
+/* ★data属性の指定は一つでOK */
+p[data-unit]:after {
+  content: attr(data-unit)"";
+}
+
+/* リスト系 */
+
+.list_apple {
+  list-style-type: none;
+}
+
+.list_apple > li {
+  padding-left: 30px;
+  position: relative;
+}
+
+.list_apple > li::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 5px;
+  background: #000;
+
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+
+/* アイコンリスト */
+
+.list_icon_apple {
+  list-style-type: none;
+}
+
+.list_icon_apple > li {
+  padding-left: 24px;
+  position: relative;
+}
+
+.list_icon_apple > li::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0,-50%);
+}
+
+.list_icon_apple .search {
+  background:url(../svg/ico_search.svg) no-repeat;
+  background-size: contain;
+}
+
+.list_icon_apple .heart {
+  background:url(../svg/ico_heart.svg) no-repeat;
+  background-size: contain;
+}
+
+.list_icon_apple .cart {
+  background:url(../svg/ico_cart.svg) no-repeat;
+  background-size: contain;
+}
+
+/* hover */
+.hover_kei > div {
+  padding-left: 24px;
+  position: relative;
+}
+
+.hover_kei > p::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: #000;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0,-60%);
+}
+
+
+.hover_kei > p:hover:before {
+  background: #0cf;
+}
+
+/* 親 */
+.box {
+  width: 100px;
+  background: url(../img/crepha/pexels-photo-1093946.webp) no-repeat center center;
+  background-size: contain;
+}
+
+.box::before {
+  content: "";
+  display: block;
+  width: 100%;
+  /* ★親の横幅が基準 */
+  padding-top: 100%;
+}
+
+
+/* ネガティブマージン */
+.container_ne {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.negative_area {
+  /* ★dashed…点線 */
+  border-left: 1px dashed #ccc;
+  border-right: 1px dashed #ccc;
+  margin: 0 auto;
+  min-height: 400px;
+}
+
+
+.list_box_blue {
+  display: flex;
+  /* ★折り返してくれる */
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: -10px;
+
+}
+
+.list_box_blue > li {
+  width: 33%;
+  padding: 10px;
+}
+
+.box_blue {
+  background: #0cf;
+  height: 100px;
+  border: 1px solid #000;
+}
+
+
+

@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* @import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css); */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+
+/* コンテナ */
+/* ポイント★横幅のみ指定 */
+.container {
+  max-width: none;
+  padding: 0 40px;
+  margin: 0 auto;
+} 
+
+
+/* ヘッダー */
+/* ポイント★ヘッダーは（高さ）を（固定）する */
+
+.header_main {
+  background: #000;
+  /* ポイント★このcolorはaタグには継承されない */
+  color: #fff;
+}
+
+.header_main > .container {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/* ロゴ */
+/* ポイント★ aタグをブロック要素に変換する */
+.header_logo_area .logo_a {
+  display: block;
+}
+
+.header_logo_area .logo_a img {
+  height: 25px;
+  /* ポイント★画像下の謎の余白を消す */
+  vertical-align: bottom;
+}
+
+/* ナビゲーション */
+.header_nav_area {
+  /* ポイント要素を右寄せ */
+  margin-left: auto;
+}
+
+.header_nav_ul {
+  display: flex;
+  align-items: center;
+}
+
+.header_nav_ul > li + li {
+  margin-left: 40px;
+}
+
+.header_nav_ul a {
+  /* ポイント★aタグのフォント色は指定必須 */
+  color: #fff;
+  /* font: 500 15px/1em 'noto sans japanese','sans-serif'; */
+  font: 500 15px/1em 'Noto Sans JP', sans-serif;
+} 
+
+.header_nav_ul .btn_contact {
+  /* ポイント★ aタグはflexに変換する */
+  display: flex;
+  /* ポイント★ blockかflexに変換するしないと下が効かない */
+  height: 36px;
+  align-items: center;
+
+  padding: 0 24px 0 48px;
+  background: hsl(210, 100%, 50%);
+  border-radius: 2px;
+
+  position: relative;
+}
+
+
+.header_nav_ul .btn_contact::before {
+  /* ポイント★ ::beforeにはcontentが必須 */
+  content:"";
+  /* ポイント★ :beforeもblack要素に指定 */
+  display: block;
+  /* ポイント★::beforeもblock要素に変換する */
+  width: 24px;
+  height: 24px;
+  background: url(../img/MyCSS/icon.png) no-repeat center center;
+  /* ポイント★ 画像を変形させないおまじない */
+  background-size: contain;
+
+  position: absolute;
+  /* ポイント★relativeの枠に対して */
+  top: 50%;
+  left: 10px;
+  /* ポイント★absolute自身に対して */
+  transform: translate(0, -50%);
+}
+
