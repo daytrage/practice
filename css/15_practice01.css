@@ -1,0 +1,94 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+body {
+  margin: 0;
+  padding: 20px;
+}
+
+p {
+  margin: 16px 0 8px 0;
+  font: bold 16px/1.3em 'Noto Sans JP', sans-serif;
+}
+
+.box {
+  width: 1000px;
+  height: 100px;
+  background: hsl(0, 0%, 70%);
+  display: flex;
+}
+
+.box1 {
+  box-sizing: border-box;
+  width: 100px;
+  background-color: hsl(20, 100%, 90%);
+}
+
+.box2 {
+  box-sizing: border-box;
+  width: 200px;
+  background-color: hsl(249, 100%, 90%);
+}
+
+.box1flex,.box2flex {
+  flex: 1;
+}
+.box1grow,.box2grow {
+  flex-grow: 1;
+}
+
+
+.box3 {
+  box-sizing: border-box;
+  width: 1000px;
+  background-color: hsl(73, 100%, 90%);
+}
+
+.box4 {
+  box-sizing: border-box;
+  width: 1000px;
+  background-color: hsl(290, 100%, 90%);
+}
+
+.box3shrink {
+  flex-shrink: 1;
+}
+
+.box4shrink {
+  flex-shrink: 2;
+}
+
+
+.box5 {
+  box-sizing: border-box;
+  flex-basis: 100px;
+  background-color: hsl(56, 100%, 90%);
+}
+.box6 {
+  box-sizing: border-box;
+  flex-basis: 200px;
+  background-color: hsl(41, 100%, 90%);
+}
+
+.box5grow,.box6grow {
+  flex-grow: 1;
+}
+
+
+/* メジャー ------------------------------ */
+
+ul {
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 2px solid black;
+}
+
+li {
+  width: 100px;
+  height: 30px;
+  box-sizing: border-box;
+  background: chartreuse;
+  border: 2px solid black;
+}

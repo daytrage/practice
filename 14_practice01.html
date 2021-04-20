@@ -9,23 +9,154 @@
   <link rel="stylesheet" href="css/14_practice01.css">
 </head>
 <body class="body">
+
+  <!-- ヘッダー　------------------------ -->
   <header class="header">
     <p>header</p>
+    <img src="https://source.unsplash.com/random/50x50" alt="">
+    <h1>サイトのタイトル</h1>
   </header>
+
+  <!-- ３カラム　------------------------ -->
   <div class="columns">
+
+    <!-- ３カラム＞ナビ　--------------------->
     <nav class="nav">
       <p>nav</p>
     </nav>
+
+    <!-- ３カラム＞メイン　---------------- -->
     <main class="main">
       <p>main</p>
+      <article>
+        <header>
+          <h1>記事のタイトルです</h1>
+          <h2>記事の副タイトルです</h2>
+          <time datetime="2021-04-01">2021-04-01</time>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam quisquam officiis officia fugit consequuntur accusamus eligendi sequi! Est quidem cupiditate deserunt nihil doloribus aliquam maiores mollitia esse consequatur reprehenderit.
+        </p>
+      </article>
+
+      <div class="markup">
+        <div class="html">
+          <pre>
+            &lt;body class="body"&gt;
+    
+            &lt;header class="header"&gt;
+              &lt;p&gt;header&lt;/p&gt;
+            &lt;/header&gt;
+    
+            &lt;div class="columns"&gt;
+    
+              &lt;nav class="nav"&gt;
+                &lt;p&gt;nav&lt;/p&gt;
+              &lt;/nav&gt;
+    
+              &lt;main class="main"&gt;
+                &lt;p&gt;main&lt;/p&gt;
+              &lt;/main&gt;
+    
+              &lt;aside class="aside"&gt;
+                &lt;p&gt;aside&lt;/p&gt;
+              &lt;/aside&gt;
+    
+            &lt;/div&gt;
+    
+            &lt;footer class="footer"&gt;
+              &lt;p&gt;footer&lt;/p&gt;
+            &lt;/footer&gt;
+          </pre>
+        </div>
+        <div class="css">
+          <pre>
+            .body {
+              background: hsl(0, 0%, 90%);
+              /* 幅 */
+              max-width: 1200px;
+              margin: 0 auto;
+              /* 高さ */
+              min-height: 100vh;
+              display: flex;
+              flex-direction: column;
+            }
+            
+            .header {
+              background: hsl(0, 100%, 90%);
+              height: 100px;
+            }
+            
+            .columns {
+              /* 子要素 親要素.body の display: flex;*/
+              flex: 1;
+              /* 親要素 */
+              display: flex;
+            }
+            
+            .nav {
+              width: 150px;
+              background: hsl(0, 100%, 85%);
+            }
+            
+            .main {
+              flex: 1;
+              background: hsl(0, 100%, 80%);
+            }
+            
+            .aside {
+              width: 200px;
+              background: hsl(0, 100%, 85%);
+            }
+            
+            .footer {
+              height: 100px;
+              background: hsl(0, 100%, 90%);
+            }
+            
+            
+            
+            /* 900px以下の場合 */
+            @media screen and (max-width: 1200px) {
+            
+              .body,.nav,.aside {
+                /* スマホの画面いっぱいにして横スクロールをなくす */
+                width: 100%;
+              }
+            
+              .columns {
+                /* 横並びを縦並びに戻す */
+                flex-direction: column;
+              }
+            
+              .main {
+                /* 順番を先頭にする */
+                order: -1;
+              }  
+            }
+          </pre>
+    
+        </div>
+    
+      </div>
     </main>
+    <!-- ３カラム＞アサイド　--- -->
     <aside class="aside">
       <p>aside</p>
+      <button id="baz">ボタン</button>
+      <script src="js/14_practice01.js"></script>
+      <input type="date" name="" id="">
     </aside>
   </div>
+
+  <!-- フッター　---------------------------------- -->
   <footer class="footer">
     <p>footer</p>
+    <small>
+      @ 2021 example.com
+    </small>
   </footer>
+
 
   
 </body>

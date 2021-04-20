@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>練習２</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/15_practice01.css">
+</head>
+<body>
+  <div class="container1">
+
+    <div class="box">
+      <div class="box1">100px</div>
+      <div class="box2">200px</div>
+    </div>
+    
+    <p>flex: 1; widthは無視して余白を配分する</p>
+    
+    <div class="box">
+      <div class="box1 box1flex">500</div>
+      <div class="box2 box2flex">500</div>
+    </div>
+  
+    <p>flex-grow: 1; width ＋ 残りの余白を配分する</p>
+  
+    <div class="box">
+      <div class="box1 box1grow">100 + 350</div>
+      <div class="box2 box2grow">200 + 350</div>
+    </div>
+
+    <ul>
+      <li>100</li>
+      <li>200</li>
+      <li>300</li>
+      <li>400</li>
+      <li>500</li>
+      <li>600</li>
+      <li>700</li>
+      <li>800</li>
+      <li>900</li>
+      <li>1000</li>
+    </ul>
+
+    <p>合計2000px。1000オーバー。</p>
+  
+    <div class="box">
+      <div class="box3">width:1000</div>
+      <div class="box4">width:1000</div>
+    </div>
+
+    <p>flex-shrink: 1; growの逆。オーバーした分をどれだけ減らすか</p>
+    <div class="box">
+      <div class="box3 box3shrink">flex-shrink: 1…1000-余白1/3</div>
+      <div class="box4 box4shrink">flex-shrink: 2…1000-余白2/3</div>
+    </div>
+    
+    
+    <ul>
+      <li>100</li>
+      <li>200</li>
+      <li>300</li>
+      <li>400</li>
+      <li>500</li>
+      <li>600</li>
+      <li>700</li>
+      <li>800</li>
+      <li>900</li>
+      <li>1000</li>
+    </ul>
+
+
+    <p>flex-basis = width</p>
+  
+    <div class="box">
+      <div class="box5">flex-basis: 100px;</div>
+      <div class="box6">flex-basis: 200px;</div>
+    </div>
+
+    <p>flex-grow: 1; </p>
+  
+    <div class="box">
+      <div class="box5 box5grow">100px + 余白1/2(350)</div>
+      <div class="box6 box6grow">200px + 余白1/2(350)</div>
+    </div>
+
+
+    <ul>
+      <li>100</li>
+      <li>200</li>
+      <li>300</li>
+      <li>400</li>
+      <li>500</li>
+      <li>600</li>
+      <li>700</li>
+      <li>800</li>
+      <li>900</li>
+      <li>1000</li>
+    </ul>
+  
+  </div>
+</body>
+</html>
